@@ -65,10 +65,9 @@ CREATE TABLE `rutas` (
 -- Volcado de datos para la tabla `rutas`
 --
 
-INSERT INTO `rutas` (`id_ruta`, `numero_de_ruta`, `nombre_de_ruta`) VALUES
-(1, 1, 'Ruta Norte'),
-(2, 2, 'Ruta Sur');
-
+INSERT INTO `rutas` (`id_ruta`, `numero_de_ruta`, `nombre_de_ruta`, `hora_dia`, `hora_tarde`) VALUES
+(1, 1, 'Ruta Norte', "6:30", "17:30"),
+(2, 2, 'Ruta Sur', "7:00", "17:30");
 --
 -- Índices para tablas volcadas
 --

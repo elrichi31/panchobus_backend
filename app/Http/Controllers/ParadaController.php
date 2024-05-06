@@ -22,4 +22,17 @@ class ParadaController extends Controller
         }
         return response()->json($parada);
     }
+
+
+    public function ruta($idRuta)
+    {
+        $paradas = Parada::where('id_ruta', $idRuta)->get();
+
+        if ($paradas->isEmpty()) {
+            return response()->json(['message' => 'No paradas found for the given route'], 404);
+        }
+
+        return response()->json($paradas);
+    }
+
 }
