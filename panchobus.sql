@@ -65,9 +65,10 @@ CREATE TABLE `rutas` (
 -- Volcado de datos para la tabla `rutas`
 --
 
-INSERT INTO `rutas` (`id_ruta`, `numero_de_ruta`, `nombre_de_ruta`, `hora_dia`, `hora_tarde`) VALUES
-(1, 1, 'Ruta Norte', "6:30", "17:30"),
-(2, 2, 'Ruta Sur', "7:00", "17:30");
+INSERT INTO `rutas` (`id_ruta`, `numero_de_ruta`, `img`, `description`, `nombre_de_ruta`, `hora_dia`, `hora_tarde`) VALUES
+(1, 1, 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEij5lfBN-feRXbbeMU7KwDV77fFfwdi3Gjh_TGC5JsJn1SSuzrQYv70vLQ8kOmRhxlqpxNUj92azb0MFxcHbd8WlbqG4hTDclzBJfYQICWIACbDv0s8wwMYKaES-EpMGBEnYWidXQMPdg/s640/Captura+de+Pantalla+2020-01-13+a+la%2528s%2529+15.50.51.png', 'Lumbisi - La primavera - HDLV - USFQ', 'Ruta Norte', "6:30", "17:30"),
+(2, 2, 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEij5lfBN-feRXbbeMU7KwDV77fFfwdi3Gjh_TGC5JsJn1SSuzrQYv70vLQ8kOmRhxlqpxNUj92azb0MFxcHbd8WlbqG4hTDclzBJfYQICWIACbDv0s8wwMYKaES-EpMGBEnYWidXQMPdg/s640/Captura+de+Pantalla+2020-01-13+a+la%2528s%2529+15.50.51.png', 'URB. Condado - USFQ - URB. Condado', 'Ruta Sur', "7:00", "17:30");
+
 --
 -- Índices para tablas volcadas
 --

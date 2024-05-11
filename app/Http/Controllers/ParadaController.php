@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Parada;
+use App\Models\Ruta;
 
 class ParadaController extends Controller
 {
@@ -26,13 +27,18 @@ class ParadaController extends Controller
 
     public function ruta($idRuta)
     {
+        $ruta = Ruta::where('id_ruta', $idRuta)->value('nombre_de_ruta');
         $paradas = Parada::where('id_ruta', $idRuta)->get();
 
         if ($paradas->isEmpty()) {
             return response()->json(['message' => 'No paradas found for the given route'], 404);
         }
+        $respuesta = [
+            'nombre_ruta' => $ruta,
+            'paradas' => $paradas
+        ];
 
-        return response()->json($paradas);
+        return response()->json($respuesta);
     }
 
 }
